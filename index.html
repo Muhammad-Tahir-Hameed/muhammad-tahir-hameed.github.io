@@ -1,170 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Muhammad Tahir Hameed - Personal Website, Professional Portfolio, CV and Services.">
-<title>Muhammad Tahir Hameed | Personal Website</title>
-<style>
-:root {
-  --bg:#080e1b;
-  --card:#111c30;
-  --blue:#38bdf8;
-  --white:#f8fafc;
-  --muted:#a6b4c8;
-}
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:var(--bg);color:var(--white);line-height:1.7}
-header{position:sticky;top:0;z-index:10;background:#0b1425f5;border-bottom:1px solid #25344b;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.logo{font-size:20px;font-weight:bold;color:var(--blue)}
-nav{display:flex;gap:20px;flex-wrap:wrap}
-nav a{color:#e2e8f0;text-decoration:none;font-size:14px}
-nav a:hover{color:var(--blue)}
-.hero{min-height:520px;padding:100px 10%;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(ellipse at 80% 30%,#17345a 0%,transparent 50%)}
-.tag{color:var(--blue);letter-spacing:3px;font-size:13px}
-h1{font-size:clamp(38px,7vw,68px);line-height:1.2;margin:20px 0}
-h1 span{color:var(--blue)}
-.hero p{max-width:650px;color:var(--muted);font-size:18px}
-.actions{margin-top:30px}
-.btn{display:inline-block;background:var(--blue);color:#07111e;padding:12px 22px;border-radius:7px;text-decoration:none;font-weight:bold;margin:5px}
-.btn.outline{background:transparent;border:1px solid var(--blue);color:var(--blue)}
-section{padding:75px 10%;scroll-margin-top:75px}
-.heading{font-size:32px;color:var(--blue);margin-bottom:25px}
-.panel{background:var(--card);border:1px solid #263951;border-radius:13px;padding:28px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.item{background:var(--card);padding:23px;border:1px solid #263951;border-radius:12px}
-.item h3{color:var(--blue);margin-bottom:10px}
-.item p,.panel p{color:var(--muted)}
-.skills{display:flex;flex-wrap:wrap;gap:12px}
-.skills span{background:#172a43;color:#bae6fd;border:1px solid #294967;padding:10px 16px;border-radius:8px}
-.contact a{color:var(--blue);text-decoration:none}
-footer{text-align:center;padding:30px;background:#0d1728;color:#94a3b8;border-top:1px solid #263951}
-@media(max-width:600px){
- header{gap:15px;padding:15px 5%}
- nav{gap:12px}
- nav a{font-size:12px}
- section{padding:55px 6%}
- .hero{padding:80px 6%}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Muhammad Tahir Hameed - Junior Network Administrator, Linux System Administration, IT Support and Networking.">
+  <title>Muhammad Tahir Hameed | IT Professional</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1120;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      background: #111c30;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      border-bottom: 1px solid #263650;
+    }
+
+    .logo { color: #38bdf8; font-size: 21px; font-weight: bold; }
+
+    nav { display: flex; flex-wrap: wrap; gap: 18px; }
+
+    nav a { color: #d1d5db; font-size: 14px; }
+    nav a:hover { color: #38bdf8; }
+
+    .hero {
+      min-height: 570px;
+      padding: 75px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 65px;
+      flex-wrap: wrap;
+      background: linear-gradient(135deg, #111c30, #0b1120);
+    }
+
+    .profile {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #38bdf8;
+      box-shadow: 0 0 30px #0ea5e955;
+    }
+
+    .hero-text { max-width: 620px; }
+    .hero h1 { font-size: 42px; line-height: 1.2; margin-bottom: 12px; }
+    .hero h2 { color: #38bdf8; font-size: 23px; margin-bottom: 15px; }
+    .hero p { color: #cbd5e1; margin-bottom: 22px; }
+
+    .button {
+      display: inline-block;
+      padding: 11px 20px;
+      border-radius: 7px;
+      background: #0284c7;
+      color: white;
+      font-weight: bold;
+      margin: 5px 7px 5px 0;
+    }
+
+    .button:hover { background: #0369a1; }
+    .button.outline { background: transparent; border: 1px solid #38bdf8; }
+
+    section { padding: 65px 8%; }
+
+    .section-title {
+      color: #38bdf8;
+      font-size: 29px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .about {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #cbd5e1;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #152238;
+      border: 1px solid #263650;
+      border-radius: 12px;
+      padding: 23px;
+    }
+
+    .card h3 { color: #38bdf8; margin-bottom: 10px; }
+    .card p, .card li { color: #cbd5e1; font-size: 14px; }
+    .card ul { padding-left: 19px; }
+
+    .experience { max-width: 850px; margin: auto; }
+
+    .certificate-card {
+      background: #152238;
+      border: 1px solid #263650;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .certificate-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 7px;
+    }
+
+    .certificate-card h3 {
+      color: #38bdf8;
+      font-size: 16px;
+      margin: 12px 0;
+    }
+
+    .certificate-card a {
+      color: #7dd3fc;
+      font-size: 14px;
+    }
+
+    .contact { text-align: center; }
+    .contact p { margin: 8px 0; color: #cbd5e1; }
+
+    footer {
+      background: #111c30;
+      padding: 22px;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 10;
+      background: #25d366;
+      color: white;
+      padding: 13px 18px;
+      border-radius: 30px;
+      font-weight: bold;
+      box-shadow: 0 4px 15px #0008;
+    }
+
+    @media (max-width: 650px) {
+      header { justify-content: center; }
+      nav { justify-content: center; }
+      .hero { text-align: center; padding: 55px 6%; gap: 30px; }
+      .hero h1 { font-size: 32px; }
+      .hero h2 { font-size: 20px; }
+      section { padding: 48px 6%; }
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
-  <div class="logo">TAHIR HAMEED.</div>
+  <div class="logo">Tahir Hameed</div>
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#certificates">Certificates</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <main>
-<section class="hero" id="home">
-  <div class="tag">PERSONAL WEBSITE & PROFESSIONAL PORTFOLIO</div>
-  <h1>Muhammad<br><span>Tahir Hameed</span></h1>
-  <p>Legal Operations | Technical Documentation | Linux Administration | Networking | Cybersecurity</p>
-  <div class="actions">
-    <a class="btn" href="#about">Explore My Profile</a>
-    <a class="btn outline" href="#contact">Contact Me</a>
-  </div>
-</section>
+  <section class="hero" id="home">
+    <img class="profile"
+      src="https://i.ibb.co/FqgzGCTZ/500.png"
+      alt="Muhammad Tahir Hameed">
 
-<section id="about">
-  <h2 class="heading">About Me</h2>
-  <div class="panel">
-    <p>I am Muhammad Tahir Hameed, a professional working in administrative operations, legal documentation and technical fields.</p>
-    <p style="margin-top:15px">My professional interests include official correspondence, departmental inquiry documentation, Linux system administration, computer networking and cybersecurity.</p>
-    <p style="margin-top:15px">This website is my personal digital space to present my professional profile, qualifications, skills, projects and services.</p>
-  </div>
-</section>
+    <div class="hero-text">
+      <h1>Muhammad Tahir Hameed</h1>
+      <h2>Junior Network Administrator</h2>
+      <p>Linux System Administration | IT Support | Networking</p>
+      <p>Lahore, Punjab, Pakistan</p>
+      <a class="button" href="#contact">Contact Me</a>
+      <a class="button outline" href="#certificates">View Certificates</a>
+    </div>
+  </section>
 
-<section id="experience">
-  <h2 class="heading">Professional Experience & Education</h2>
-  <div class="grid">
-    <div class="item">
-      <h3>Public Sector Experience</h3>
-      <p>Junior Clerk – Punjab School Education Department</p>
-      <p>Administrative operations, official correspondence, inquiry documentation and record management.</p>
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about">
+      <p>
+        I am an IT-focused professional with technical training in Linux
+        system administration, networking fundamentals and cybersecurity.
+        I have completed RHCE training and Certified Ethical Hacking
+        coursework and examination, and I am currently pursuing CCNA.
+        Alongside my technical development, I bring professional
+        administrative and documentation experience from the Punjab
+        School Education Department.
+      </p>
     </div>
-    <div class="item">
-      <h3>Technical Training</h3>
-      <p>RHCE – Red Hat Certified Engineer training</p>
-      <p>Linux administration and system management.</p>
-    </div>
-    <div class="item">
-      <h3>Cybersecurity</h3>
-      <p>Certified Ethical Hacking training</p>
-      <p>Security fundamentals, ethical hacking and technical learning.</p>
-    </div>
-    <div class="item">
-      <h3>Networking</h3>
-      <p>CCNA learning and practical networking concepts.</p>
-      <p>Routing, switching, VLANs and network fundamentals.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="skills">
-  <h2 class="heading">My Skills</h2>
-  <div class="panel">
-    <div class="skills">
-      <span>Legal Documentation</span>
-      <span>Official Drafting</span>
-      <span>Departmental Inquiries</span>
-      <span>Data Entry</span>
-      <span>MS Office</span>
-      <span>Linux Administration</span>
-      <span>RHCE</span>
-      <span>Networking</span>
-      <span>CCNA</span>
-      <span>Cybersecurity</span>
-      <span>Technical Documentation</span>
-      <span>Research & Analysis</span>
-    </div>
-  </div>
-</section>
+  <section id="skills">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Linux & Systems</h3>
+        <ul>
+          <li>Red Hat Enterprise Linux (RHEL)</li>
+          <li>Linux Command Line</li>
+          <li>Kali Linux</li>
+          <li>VirtualBox</li>
+        </ul>
+      </div>
 
-<section id="services">
-  <h2 class="heading">Professional Services</h2>
-  <div class="grid">
-    <div class="item">
-      <h3>CV & Resume</h3>
-      <p>Professional CV formatting, editing and document preparation.</p>
-    </div>
-    <div class="item">
-      <h3>Documentation</h3>
-      <p>Typing, formatting, official documents and administrative support.</p>
-    </div>
-    <div class="item">
-      <h3>Data Entry</h3>
-      <p>Data organization, spreadsheet preparation and record management.</p>
-    </div>
-    <div class="item">
-      <h3>Technical Support</h3>
-      <p>Basic Linux, computer and networking support services.</p>
-    </div>
-  </div>
-</section>
+      <div class="card">
+        <h3>Networking</h3>
+        <ul>
+          <li>TCP/IP & IPv4 Addressing</li>
+          <li>VLANs</li>
+          <li>Static Routing</li>
+          <li>OSPF Fundamentals</li>
+          <li>Switching & Troubleshooting</li>
+        </ul>
+      </div>
 
-<section id="contact">
-  <h2 class="heading">Get In Touch</h2>
-  <div class="panel contact">
-    <p>For professional inquiries, collaboration and services:</p>
+      <div class="card">
+        <h3>Cybersecurity</h3>
+        <ul>
+          <li>Ethical Hacking Fundamentals</li>
+          <li>Security Concepts</li>
+          <li>Web Security Fundamentals</li>
+          <li>Wi-Fi Security Fundamentals</li>
+          <li>Lab-based Practice</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>IT Operations</h3>
+        <ul>
+          <li>Windows 10</li>
+          <li>System Setup</li>
+          <li>Technical Documentation</li>
+          <li>IT Troubleshooting</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="experience card">
+      <h3>Punjab School Education Department</h3>
+      <p><strong>Government of Punjab</strong></p>
+      <p><strong>Junior Clerk | December 2022 – Present</strong></p>
+      <ul>
+        <li>Prepare official correspondence, reports and departmental documentation.</li>
+        <li>Maintain administrative records and organize case files.</li>
+        <li>Coordinate official communications with departmental offices.</li>
+        <li>Handle data organization and documentation with accuracy and attention to deadlines.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h2 class="section-title">Certificates & Training</h2>
+    <div class="grid">
+
+      <div class="certificate-card">
+        <img src="https://i.ibb.co/jvY8bDjk/RHCE-Certificate-Muhammad-Tahir-Hameed.png"
+          alt="RHCE Certificate">
+        <h3>Red Hat Certified Engineer (RHCE)</h3>
+        <a href="https://ibb.co/tM6HQD1p" target="_blank" rel="noopener">View Certificate</a>
+      </div>
+
+      <div class="certificate-card">
+        <img src="https://i.ibb.co/SDwcnSVx/C-E-H.png"
+          alt="Certified Ethical Hacking Certificate">
+        <h3>Certified Ethical Hacking</h3>
+        <a href="https://ibb.co/bj5FBtN3" target="_blank" rel="noopener">View Certificate</a>
+      </div>
+
+      <div class="certificate-card">
+        <img src="https://i.ibb.co/v4gGy03w/Web-hacking-cropped.png"
+          alt="Web Hacking and Security Testing Certificate">
+        <h3>Web Hacking & Security Testing</h3>
+        <a href="https://ibb.co/4R9Gvh8m" target="_blank" rel="noopener">View Certificate</a>
+      </div>
+
+      <div class="certificate-card">
+        <img src="https://i.ibb.co/4R6ZF24v/wifi-hacking-Certificate.png"
+          alt="Wi-Fi Security and Hacking Techniques Certificate">
+        <h3>Wi-Fi Security & Hacking Techniques</h3>
+        <a href="https://ibb.co/MkYDgfPw" target="_blank" rel="noopener">View Certificate</a>
+      </div>
+
+    </div>
+
+    <div class="card" style="margin-top:22px; text-align:center;">
+      <h3>Currently Learning</h3>
+      <p>Cisco CCNA — In Progress</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Linux Support</h3>
+        <p>Basic Linux system setup, command-line assistance and troubleshooting.</p>
+      </div>
+
+      <div class="card">
+        <h3>Networking Support</h3>
+        <p>Basic network configuration, IP addressing, VLAN concepts and troubleshooting.</p>
+      </div>
+
+      <div class="card">
+        <h3>IT Support</h3>
+        <p>Windows setup, software installation and basic computer troubleshooting.</p>
+      </div>
+
+      <div class="card">
+        <h3>Documentation & Data Entry</h3>
+        <p>Typing, data organization, Excel tasks and professional document formatting.</p>
+      </div>
+
+      <div class="card">
+        <h3>Cybersecurity Learning Support</h3>
+        <p>Basic cybersecurity concepts and safe, authorized lab-based learning assistance.</p>
+      </div>
+
+      <div class="card">
+        <h3>Technical Documentation</h3>
+        <p>Organizing technical information, reports and clear documentation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p><strong>Muhammad Tahir Hameed</strong></p>
+    <p>Lahore, Punjab, Pakistan</p>
     <p>Email: <a href="mailto:thehmthsaqq@gmail.com">thehmthsaqq@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Rocky-G4" target="_blank">github.com/Rocky-G4</a></p>
-    <p>Location: Lahore, Punjab, Pakistan</p>
-  </div>
-</section>
+    <p>Phone: <a href="tel:+923247878419">+92 324 7878419</a></p>
+    <a class="button" href="https://wa.me/923247878419" target="_blank" rel="noopener">
+      Chat on WhatsApp
+    </a>
+    <a class="button outline" href="mailto:thehmthsaqq@gmail.com">
+      Send Email
+    </a>
+  </section>
 </main>
 
 <footer>
-  <p>© 2026 Muhammad Tahir Hameed. All Rights Reserved.</p>
-  <p>Personal Website | Professional Portfolio</p>
+  © 2026 Muhammad Tahir Hameed. All Rights Reserved.
 </footer>
+
+<a class="whatsapp" href="https://wa.me/923247878419"
+  target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  WhatsApp
+</a>
 
 </body>
 </html>
