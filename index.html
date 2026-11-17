@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Muhammad Tahir Hameed - Junior Network Administrator, Linux System Administration, IT Support and Networking.">
+  <meta name="description" content="Muhammad Tahir Hameed - Junior Network Administrator, Linux System Administration, IT Support, Networking and Cybersecurity.">
   <title>Muhammad Tahir Hameed | IT Professional</title>
 
   <style>
@@ -33,7 +34,7 @@
 
     .logo { color: #38bdf8; font-size: 21px; font-weight: bold; }
 
-    nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
 
     nav a { color: #d1d5db; font-size: 14px; }
     nav a:hover { color: #38bdf8; }
@@ -61,7 +62,7 @@
     .hero-text { max-width: 620px; }
     .hero h1 { font-size: 42px; line-height: 1.2; margin-bottom: 12px; }
     .hero h2 { color: #38bdf8; font-size: 23px; margin-bottom: 15px; }
-    .hero p { color: #cbd5e1; margin-bottom: 22px; }
+    .hero p { color: #cbd5e1; margin-bottom: 12px; }
 
     .button {
       display: inline-block;
@@ -83,6 +84,13 @@
       font-size: 29px;
       margin-bottom: 25px;
       text-align: center;
+    }
+
+    .section-intro {
+      max-width: 850px;
+      margin: -10px auto 28px;
+      text-align: center;
+      color: #cbd5e1;
     }
 
     .about {
@@ -115,28 +123,77 @@
       background: #152238;
       border: 1px solid #263650;
       border-radius: 12px;
-      padding: 15px;
+      padding: 18px;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .certificate-card img {
+      display: block;
       width: 100%;
-      height: 220px;
+      height: 300px;
       object-fit: contain;
       background: #fff;
       border-radius: 7px;
+      padding: 5px;
     }
 
     .certificate-card h3 {
       color: #38bdf8;
       font-size: 16px;
-      margin: 12px 0;
+      margin: 14px 0 8px;
+    }
+
+    .certificate-card p {
+      color: #cbd5e1;
+      font-size: 13px;
+      margin-bottom: 10px;
     }
 
     .certificate-card a {
       color: #7dd3fc;
       font-size: 14px;
+      margin-top: auto;
     }
+
+    .status {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      margin: 8px 0;
+    }
+
+    .completed {
+      color: #86efac;
+      background: #14532d55;
+      border: 1px solid #166534;
+    }
+
+    .progress {
+      color: #7dd3fc;
+      background: #07598555;
+      border: 1px solid #0369a1;
+    }
+
+    .planned {
+      color: #fcd34d;
+      background: #78350f55;
+      border: 1px solid #92400e;
+    }
+
+    .roadmap-card {
+      border-left: 3px solid #38bdf8;
+    }
+
+    .roadmap-card.future {
+      border-left-color: #f59e0b;
+    }
+
+    .roadmap-card p { margin-bottom: 8px; }
 
     .contact { text-align: center; }
     .contact p { margin: 8px 0; color: #cbd5e1; }
@@ -169,6 +226,7 @@
       .hero h1 { font-size: 32px; }
       .hero h2 { font-size: 20px; }
       section { padding: 48px 6%; }
+      .certificate-card img { height: 240px; }
     }
   </style>
 </head>
@@ -182,7 +240,8 @@
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
-    <a href="#certificates">Certificates</a>
+    <a href="#certificates">Training</a>
+    <a href="#roadmap">Learning Roadmap</a>
     <a class="button" href="CV.pdf" download>Download My CV</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
@@ -190,6 +249,8 @@
 </header>
 
 <main>
+
+  <!-- HOME -->
   <section class="hero" id="home">
     <img class="profile"
       src="https://i.ibb.co/FqgzGCTZ/500.png"
@@ -200,19 +261,24 @@
       <h2>Junior Network Administrator</h2>
       <p>Linux System Administration | IT Support | Networking</p>
       <p>Lahore, Punjab, Pakistan</p>
+
       <a class="button" href="#contact">Contact Me</a>
       <a class="button outline" href="#certificates">View Certificates</a>
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about">
     <h2 class="section-title">About Me</h2>
     <div class="about">
       <p>
         I am an IT-focused professional with technical training in Linux
         system administration, networking fundamentals and cybersecurity.
-        I have completed RHCE training and Certified Ethical Hacking
-        coursework and examination, and I am currently pursuing CCNA.
+        I have completed RHCE-related training, Certified Ethical Hacking,
+        Web Hacking and Wi-Fi Security coursework. I am currently pursuing
+        Cisco CCNA and Cisco Certified CyberOps Associate training.
+        I am also interested in developing practical skills in cloud
+        computing and AWS technologies.
         Alongside my technical development, I bring professional
         administrative and documentation experience from the Punjab
         School Education Department.
@@ -220,15 +286,19 @@
     </div>
   </section>
 
+  <!-- SKILLS -->
   <section id="skills">
     <h2 class="section-title">Technical Skills</h2>
+
     <div class="grid">
+
       <div class="card">
         <h3>Linux & Systems</h3>
         <ul>
           <li>Red Hat Enterprise Linux (RHEL)</li>
           <li>Linux Command Line</li>
           <li>Kali Linux</li>
+          <li>Ansible Fundamentals</li>
           <li>VirtualBox</li>
         </ul>
       </div>
@@ -240,6 +310,9 @@
           <li>VLANs</li>
           <li>Static Routing</li>
           <li>OSPF Fundamentals</li>
+          <li>Rapid PVST+ Fundamentals</li>
+          <li>EtherChannel / LACP</li>
+          <li>NAT & FHRP Fundamentals</li>
           <li>Switching & Troubleshooting</li>
         </ul>
       </div>
@@ -248,10 +321,11 @@
         <h3>Cybersecurity</h3>
         <ul>
           <li>Ethical Hacking Fundamentals</li>
-          <li>Security Concepts</li>
+          <li>Penetration Testing Concepts</li>
           <li>Web Security Fundamentals</li>
           <li>Wi-Fi Security Fundamentals</li>
-          <li>Lab-based Practice</li>
+          <li>Network Security Concepts</li>
+          <li>Security Monitoring Fundamentals</li>
         </ul>
       </div>
 
@@ -262,17 +336,22 @@
           <li>System Setup</li>
           <li>Technical Documentation</li>
           <li>IT Troubleshooting</li>
+          <li>Virtualization Fundamentals</li>
         </ul>
       </div>
+
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
   <section id="experience">
     <h2 class="section-title">Professional Experience</h2>
+
     <div class="experience card">
       <h3>Punjab School Education Department</h3>
       <p><strong>Government of Punjab</strong></p>
       <p><strong>Junior Clerk | December 2022 – Present</strong></p>
+
       <ul>
         <li>Prepare official correspondence, reports and departmental documentation.</li>
         <li>Maintain administrative records and organize case files.</li>
@@ -282,63 +361,140 @@
     </div>
   </section>
 
-  <!-- UPDATED CERTIFICATES SECTION -->
+  <!-- CERTIFICATES AND COMPLETED TRAINING -->
   <section id="certificates">
-    <h2 class="section-title">Certificates & Training</h2>
+    <h2 class="section-title">Certificates & Completed Training</h2>
+
+    <p class="section-intro">
+      Completed technical training and certificates in Linux,
+      networking and cybersecurity.
+    </p>
+
     <div class="grid">
 
       <div class="certificate-card">
-        <a href="https://ibb.co/cS2n9VwN" target="_blank" rel="noopener">
-          <img
-            src="https://i.ibb.co/S4VCgGcK/Cropped-RHCE-Certificate-Muhammad-Tahir-Hameed.png"
-            alt="RHCE Certificate">
-        </a>
+        <img
+          src="https://i.ibb.co/S4VCgGcK/Cropped-RHCE-Certificate-Muhammad-Tahir-Hameed.png"
+          alt="RHCE Certificate">
+
         <h3>Red Hat Certified Engineer (RHCE)</h3>
-        <a href="https://ibb.co/cS2n9VwN" target="_blank" rel="noopener">View Full Certificate</a>
+        <span class="status completed">Training Completed</span>
+        <p>Linux Administration & Ansible Automation</p>
+        <a href="https://ibb.co/cS2n9VwN" target="_blank" rel="noopener">
+          View Full Certificate
+        </a>
       </div>
 
       <div class="certificate-card">
-        <a href="https://ibb.co/b5FBtN3" target="_blank" rel="noopener">
-          <img
-            src="https://i.ibb.co/s9vmVQ2L/C-E-H.png"
-            alt="Certified Ethical Hacking Certificate">
-        </a>
+        <img
+          src="https://i.ibb.co/s9vmVQ2L/C-E-H.png"
+          alt="Certified Ethical Hacking Certificate">
+
         <h3>Certified Ethical Hacking</h3>
-        <a href="https://ibb.co/b5FBtN3" target="_blank" rel="noopener">View Full Certificate</a>
+        <span class="status completed">Completed</span>
+        <p>Ethical Hacking & Cybersecurity</p>
+        <a href="https://ibb.co/b5FBtN3" target="_blank" rel="noopener">
+          View Full Certificate
+        </a>
       </div>
 
       <div class="certificate-card">
+        <img
+          src="https://i.ibb.co/CpYYZgYL/Web-hacking-cropped-rotated.png"
+          alt="Web Hacking and Security Testing Certificate">
+
+        <h3>Web Hacking & Security Testing</h3>
+        <span class="status completed">Completed</span>
+        <p>Web Penetration Testing Fundamentals</p>
         <a href="https://ibb.co/gbffpNfY" target="_blank" rel="noopener">
-          <img
-            src="https://i.ibb.co/CpYYZgYL/Web-hacking-cropped-rotated.png"
-            alt="Web Hacking and Security Techniques Certificate">
+          View Full Certificate
         </a>
-        <h3>Web Hacking & Security Techniques</h3>
-        <a href="https://ibb.co/gbffpNfY" target="_blank" rel="noopener">View Full Certificate</a>
       </div>
 
       <div class="certificate-card">
-        <a href="https://ibb.co/7x154Sx6" target="_blank" rel="noopener">
-          <img
-            src="https://i.ibb.co/SD38r6D9/wifi-hacking-Certificate.png"
-            alt="Wi-Fi Security Certificate">
-        </a>
+        <img
+          src="https://i.ibb.co/SD38r6D9/wifi-hacking-Certificate.png"
+          alt="Wi-Fi Security and Hacking Techniques Certificate">
+
         <h3>Wi-Fi Security & Hacking Techniques</h3>
-        <a href="https://ibb.co/7x154Sx6" target="_blank" rel="noopener">View Full Certificate</a>
+        <span class="status completed">Completed</span>
+        <p>Wireless Network Security Fundamentals</p>
+        <a href="https://ibb.co/7x154Sx6" target="_blank" rel="noopener">
+          View Full Certificate
+        </a>
       </div>
 
-    </div>
-
-    <div class="card" style="margin-top:22px; text-align:center;">
-      <h3>Currently Learning</h3>
-      <p>Cisco CCNA — In Progress</p>
     </div>
   </section>
-  <!-- END CERTIFICATES SECTION -->
 
+  <!-- LEARNING ROADMAP -->
+  <section id="roadmap">
+    <h2 class="section-title">Learning Roadmap & Future Work</h2>
+
+    <p class="section-intro">
+      My ongoing technical learning and planned development
+      in networking, cybersecurity and cloud computing.
+    </p>
+
+    <div class="grid">
+
+      <div class="card roadmap-card">
+        <h3>Cisco CCNA</h3>
+        <span class="status progress">In Progress</span>
+        <p>
+          Cisco Certified Network Associate training covering
+          networking fundamentals, switching, VLANs, STP,
+          EtherChannel, routing, OSPF, NAT and network services.
+        </p>
+      </div>
+
+      <div class="card roadmap-card">
+        <h3>Cisco Certified CyberOps Associate</h3>
+        <span class="status progress">In Progress</span>
+        <p>
+          Cybersecurity operations training covering network
+          security, security concepts, monitoring, threat analysis,
+          host-based analysis and incident investigation.
+        </p>
+      </div>
+
+      <div class="card roadmap-card future">
+        <h3>AWS Certified Database – Specialty</h3>
+        <span class="status planned">Future Learning · Not Started</span>
+        <p>
+          Planned learning in AWS database services, database
+          architecture, migration, backup, monitoring and security.
+        </p>
+      </div>
+
+      <div class="card roadmap-card future">
+        <h3>AWS Certified Advanced Networking – Specialty</h3>
+        <span class="status planned">Future Learning · Not Started</span>
+        <p>
+          Planned learning in AWS networking, VPC, VPN, Direct Connect,
+          Transit Gateway, routing, cloud security and hybrid networks.
+        </p>
+      </div>
+
+      <div class="card roadmap-card future">
+        <h3>AWS Certified Developer – Associate</h3>
+        <span class="status planned">Future Learning · Not Started</span>
+        <p>
+          Planned learning in AWS development, EC2, S3, Lambda,
+          API Gateway, IAM, databases, serverless applications
+          and CI/CD services.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
   <section id="services">
     <h2 class="section-title">Services</h2>
+
     <div class="grid">
+
       <div class="card">
         <h3>Linux Support</h3>
         <p>Basic Linux system setup, command-line assistance and troubleshooting.</p>
@@ -368,30 +524,45 @@
         <h3>Technical Documentation</h3>
         <p>Organizing technical information, reports and clear documentation.</p>
       </div>
+
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" class="contact">
     <h2 class="section-title">Contact Me</h2>
+
     <p><strong>Muhammad Tahir Hameed</strong></p>
     <p>Lahore, Punjab, Pakistan</p>
-    <p>Email: <a href="mailto:thehmthsaqq@gmail.com">thehmthsaqq@gmail.com</a></p>
-    <p>Phone: <a href="tel:+923247878419">+92 324 7878419</a></p>
-    <a class="button" href="https://wa.me/923247878419" target="_blank" rel="noopener">
+    <p>Email:
+      <a href="mailto:thehmthsaqq@gmail.com">thehmthsaqq@gmail.com</a>
+    </p>
+    <p>Phone:
+      <a href="tel:+923247878419">+92 324 7878419</a>
+    </p>
+
+    <a class="button"
+       href="https://wa.me/923247878419"
+       target="_blank" rel="noopener">
       Chat on WhatsApp
     </a>
+
     <a class="button outline" href="mailto:thehmthsaqq@gmail.com">
       Send Email
     </a>
   </section>
+
 </main>
 
 <footer>
   © 2026 Muhammad Tahir Hameed. All Rights Reserved.
 </footer>
 
-<a class="whatsapp" href="https://wa.me/923247878419"
-  target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<a class="whatsapp"
+   href="https://wa.me/923247878419"
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat on WhatsApp">
   WhatsApp
 </a>
 
