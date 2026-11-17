@@ -2,96 +2,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Muhammad Tahir Hameed - Personal Website and Professional Portfolio">
-  <title>Muhammad Tahir Hameed | Official Website</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, sans-serif; background: #0b1220; color: #e5e7eb; line-height: 1.7; }
-    header { padding: 22px 8%; display: flex; justify-content: space-between; align-items: center; background: #111c30; flex-wrap: wrap; }
-    .logo { font-size: 20px; font-weight: bold; color: #60a5fa; }
-    nav a { color: #e5e7eb; text-decoration: none; margin: 8px; font-size: 14px; }
-    .hero { min-height: 420px; padding: 100px 8%; display: flex; flex-direction: column; justify-content: center; }
-    .hero h1 { font-size: clamp(35px, 6vw, 58px); color: white; line-height: 1.2; }
-    .hero h1 span { color: #60a5fa; }
-    .hero p { max-width: 650px; margin: 20px 0; color: #b8c3d5; }
-    .btn { display: inline-block; padding: 11px 22px; background: #2563eb; color: white; text-decoration: none; border-radius: 7px; margin: 6px 8px 6px 0; }
-    section { padding: 65px 8%; }
-    section h2 { font-size: 29px; color: #60a5fa; margin-bottom: 20px; }
-    .panel { background: #111c30; border: 1px solid #26364f; padding: 25px; border-radius: 12px; max-width: 850px; }
-    .skills { display: flex; flex-wrap: wrap; gap: 12px; }
-    .skills span { background: #1e3150; padding: 9px 15px; border-radius: 7px; }
-    footer { text-align: center; padding: 25px; background: #111c30; color: #9ca3af; }
-    a { color: #93c5fd; }
-    @media(max-width:600px) { header { gap: 12px; } nav a { margin: 4px; } .hero { padding-top: 75px; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Muhammad Tahir Hameed - Personal Website, Professional Portfolio, CV and Services.">
+<title>Muhammad Tahir Hameed | Personal Website</title>
+<style>
+:root {
+  --bg:#080e1b;
+  --card:#111c30;
+  --blue:#38bdf8;
+  --white:#f8fafc;
+  --muted:#a6b4c8;
+}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:var(--bg);color:var(--white);line-height:1.7}
+header{position:sticky;top:0;z-index:10;background:#0b1425f5;border-bottom:1px solid #25344b;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:bold;color:var(--blue)}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:#e2e8f0;text-decoration:none;font-size:14px}
+nav a:hover{color:var(--blue)}
+.hero{min-height:520px;padding:100px 10%;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(ellipse at 80% 30%,#17345a 0%,transparent 50%)}
+.tag{color:var(--blue);letter-spacing:3px;font-size:13px}
+h1{font-size:clamp(38px,7vw,68px);line-height:1.2;margin:20px 0}
+h1 span{color:var(--blue)}
+.hero p{max-width:650px;color:var(--muted);font-size:18px}
+.actions{margin-top:30px}
+.btn{display:inline-block;background:var(--blue);color:#07111e;padding:12px 22px;border-radius:7px;text-decoration:none;font-weight:bold;margin:5px}
+.btn.outline{background:transparent;border:1px solid var(--blue);color:var(--blue)}
+section{padding:75px 10%;scroll-margin-top:75px}
+.heading{font-size:32px;color:var(--blue);margin-bottom:25px}
+.panel{background:var(--card);border:1px solid #263951;border-radius:13px;padding:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.item{background:var(--card);padding:23px;border:1px solid #263951;border-radius:12px}
+.item h3{color:var(--blue);margin-bottom:10px}
+.item p,.panel p{color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:12px}
+.skills span{background:#172a43;color:#bae6fd;border:1px solid #294967;padding:10px 16px;border-radius:8px}
+.contact a{color:var(--blue);text-decoration:none}
+footer{text-align:center;padding:30px;background:#0d1728;color:#94a3b8;border-top:1px solid #263951}
+@media(max-width:600px){
+ header{gap:15px;padding:15px 5%}
+ nav{gap:12px}
+ nav a{font-size:12px}
+ section{padding:55px 6%}
+ .hero{padding:80px 6%}
+}
+</style>
 </head>
 <body>
-  <header>
-    <div class="logo">TAHIR HAMEED</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <div class="hero" id="home">
-      <p>WELCOME TO MY PERSONAL WEBSITE</p>
-      <h1>Muhammad <span>Tahir Hameed</span></h1>
-      <p>Legal Operations | Technical Documentation | Networking | Cybersecurity</p>
-      <a class="btn" href="#about">Explore My Profile</a>
-      <a class="btn" href="#contact">Contact Me</a>
+<header>
+  <div class="logo">TAHIR HAMEED.</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="tag">PERSONAL WEBSITE & PROFESSIONAL PORTFOLIO</div>
+  <h1>Muhammad<br><span>Tahir Hameed</span></h1>
+  <p>Legal Operations | Technical Documentation | Linux Administration | Networking | Cybersecurity</p>
+  <div class="actions">
+    <a class="btn" href="#about">Explore My Profile</a>
+    <a class="btn outline" href="#contact">Contact Me</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="heading">About Me</h2>
+  <div class="panel">
+    <p>I am Muhammad Tahir Hameed, a professional working in administrative operations, legal documentation and technical fields.</p>
+    <p style="margin-top:15px">My professional interests include official correspondence, departmental inquiry documentation, Linux system administration, computer networking and cybersecurity.</p>
+    <p style="margin-top:15px">This website is my personal digital space to present my professional profile, qualifications, skills, projects and services.</p>
+  </div>
+</section>
+
+<section id="experience">
+  <h2 class="heading">Professional Experience & Education</h2>
+  <div class="grid">
+    <div class="item">
+      <h3>Public Sector Experience</h3>
+      <p>Junior Clerk – Punjab School Education Department</p>
+      <p>Administrative operations, official correspondence, inquiry documentation and record management.</p>
     </div>
+    <div class="item">
+      <h3>Technical Training</h3>
+      <p>RHCE – Red Hat Certified Engineer training</p>
+      <p>Linux administration and system management.</p>
+    </div>
+    <div class="item">
+      <h3>Cybersecurity</h3>
+      <p>Certified Ethical Hacking training</p>
+      <p>Security fundamentals, ethical hacking and technical learning.</p>
+    </div>
+    <div class="item">
+      <h3>Networking</h3>
+      <p>CCNA learning and practical networking concepts.</p>
+      <p>Routing, switching, VLANs and network fundamentals.</p>
+    </div>
+  </div>
+</section>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="panel">
-        I am Muhammad Tahir Hameed, an administrative and technical professional
-        interested in legal documentation, official correspondence, networking
-        and cybersecurity. This is my personal space to share my professional
-        profile, skills, projects and services.
-      </div>
-    </section>
+<section id="skills">
+  <h2 class="heading">My Skills</h2>
+  <div class="panel">
+    <div class="skills">
+      <span>Legal Documentation</span>
+      <span>Official Drafting</span>
+      <span>Departmental Inquiries</span>
+      <span>Data Entry</span>
+      <span>MS Office</span>
+      <span>Linux Administration</span>
+      <span>RHCE</span>
+      <span>Networking</span>
+      <span>CCNA</span>
+      <span>Cybersecurity</span>
+      <span>Technical Documentation</span>
+      <span>Research & Analysis</span>
+    </div>
+  </div>
+</section>
 
-    <section id="skills">
-      <h2>My Skills</h2>
-      <div class="skills">
-        <span>Legal Documentation</span>
-        <span>Official Drafting</span>
-        <span>Data Entry</span>
-        <span>Linux Administration</span>
-        <span>Networking</span>
-        <span>Cybersecurity</span>
-        <span>Technical Documentation</span>
-      </div>
-    </section>
+<section id="services">
+  <h2 class="heading">Professional Services</h2>
+  <div class="grid">
+    <div class="item">
+      <h3>CV & Resume</h3>
+      <p>Professional CV formatting, editing and document preparation.</p>
+    </div>
+    <div class="item">
+      <h3>Documentation</h3>
+      <p>Typing, formatting, official documents and administrative support.</p>
+    </div>
+    <div class="item">
+      <h3>Data Entry</h3>
+      <p>Data organization, spreadsheet preparation and record management.</p>
+    </div>
+    <div class="item">
+      <h3>Technical Support</h3>
+      <p>Basic Linux, computer and networking support services.</p>
+    </div>
+  </div>
+</section>
 
-    <section id="services">
-      <h2>My Services</h2>
-      <div class="panel">
-        <p>Professional documentation and typing</p>
-        <p>CV and resume preparation</p>
-        <p>Data entry and administrative support</p>
-        <p>Technical documentation and IT support</p>
-        <p>For professional inquiries, please contact me.</p>
-      </div>
-    </section>
+<section id="contact">
+  <h2 class="heading">Get In Touch</h2>
+  <div class="panel contact">
+    <p>For professional inquiries, collaboration and services:</p>
+    <p style="margin-top:15px">Email: <a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/Rocky-G4" target="_blank">github.com/Rocky-G4</a></p>
+    <p>Location: Lahore, Punjab, Pakistan</p>
+  </div>
+</section>
+</main>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <div class="panel">
-        <p>Email: <a href="mailto:thehmthsaqq@gmail.com">thehmthsaqq@gmail.com</a></p>
-        <p>Location: Lahore, Punjab, Pakistan</p>
-        <p>GitHub: <a href="https://github.com/Rocky-G4">Rocky-G4</a></p>
-      </div>
-    </section>
-  </main>
+<footer>
+  <p>© 2026 Muhammad Tahir Hameed. All Rights Reserved.</p>
+  <p>Personal Website | Professional Portfolio</p>
+</footer>
 
-  <footer>© 2026 Muhammad Tahir Hameed. All rights reserved.</footer>
 </body>
 </html>
